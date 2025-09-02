@@ -78,6 +78,8 @@ function analyzeSalesData(data, options) {
             const revenue = calculateRevenue(item, product);// Посчитать выручку (revenue) с учётом скидки через функцию calculateRevenue
             const profit = revenue - cost;// Посчитать прибыль: выручка минус себестоимость
             // Увеличить общую накопленную прибыль (profit) у продавца  
+            // ДОБАВИТЬ: накапливаем выручку от каждого товара
+            seller.revenue += revenue;
             seller.profit += profit; 
             // Учёт количества проданных товаров
             if (!seller.products_sold[item.sku]) {
