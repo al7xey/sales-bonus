@@ -8,8 +8,8 @@ function calculateSimpleRevenue(purchase, _product) {
     const { discount, sale_price, quantity } = purchase;
     const discountMultiplier = 1 - (discount / 100);
     // @TODO: Расчет выручки от операции
-    return sale_price * quantity * discountMultiplier;
-}
+    const revenue = sale_price * quantity * discountMultiplier;
+    return +revenue.toFixed(2); 
 
 /**
  * Функция для расчета бонусов
