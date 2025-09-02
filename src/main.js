@@ -10,6 +10,7 @@ function calculateSimpleRevenue(purchase, _product) {
     // @TODO: Расчет выручки от операции
     const revenue = sale_price * quantity * discountMultiplier;
     return +revenue.toFixed(2); 
+}
 
 /**
  * Функция для расчета бонусов
