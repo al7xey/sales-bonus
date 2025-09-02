@@ -71,8 +71,6 @@ function analyzeSalesData(data, options) {
     data.purchase_records.forEach(record => { // Чек 
         const seller = sellerIndex[record.seller_id]; // Продавец
         seller.sales_count += 1; // Увеличить количество продаж 
-        seller.revenue += record.total_amount - record.total_discount; // Увеличить общую сумму всех продаж 
-
         // Расчёт прибыли для каждого товара
         record.items.forEach(item => {
             const product = productIndex[item.sku]; // Товар
